@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>React App</title>
+    <script src="/zalopay.js"></script>
+    <script src="/zalopay-internal.js"></script>
+  </head>
+  <body>
+    <style>
+      body > div {
+        word-break: break-all;
+        margin-bottom: 20px;
+      }
+    </style>
+    <script>
+      function share() {
+        ZaloPay.call(
+          'share',
+          {
+            type: 2,
+            caption: 'Gửi lời mời',
+            message: 'Tải app ngay: https://zalopay.vn/tai-app/'
+          }
+        )
+      }
+	  function scan() {
+      var opt =       {
+        desc: 'scanQRCode desc',
+        needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
+        scanType: ["qrCode","barCode"], // Scanning type, including QR code or bar code. Both by default.
+        success: function(res) {
+          alert("scan result: " + res.scan_result);
+        }
+      };
+	  	ZaloPay.scanQRCode(opt);
+    }
+    
+    function scanar() {
+      ZaloPay.scanARCampaign();
+    }
+    
+  </script>
+   <button onclick="scan()">ScanQR</button>
+   <button onclick="share()">Share</button>
+   <button onclick="scanar()">ScanAR</button>
+  </body>
+</html>
