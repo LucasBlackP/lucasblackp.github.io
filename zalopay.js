@@ -535,7 +535,6 @@
   }
 
   ZaloPay.scanARCampaign = function() {
-    alert("hello");
     ZaloPay.call('scanARCampaign');
   };
 
