@@ -534,8 +534,19 @@
     ZaloPay.call('hideNavigationButtons', opt);
   }
 
-  ZaloPay.scanARCampaign = function() {
-    ZaloPay.call('scanARCampaign');
+  ZaloPay.scanARCampaign = function(opt) {
+    if (!isObj(opt)) {
+      writeLog('error', 'ZaloPay.scanQRCode', 'Received invalid object');
+      return;
+    }
+    // if (isStr(opt.desc) && isNumber(opt.needResult) && isArray(opt.scanType)) {
+      const cb = opt.success;
+      opt = {
+        desc: opt.desc,
+        needResult: opt.needResult,
+        scanType: opt.scanType
+      };
+    ZaloPay.call('scanARCampaign', opt, cb);
   };
 
   ZaloPay.requestAnimationFrame = function(cb) {
