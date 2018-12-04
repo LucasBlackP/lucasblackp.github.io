@@ -44,7 +44,7 @@
         needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
         scanType: ["qrCode"], // Scanning type, including QR code or bar code. Both by default.
         success: function(res) {
-          alert("scan result: " + res.scan_result);
+          alert("scan result: " + res);
         }
       };
       ZaloPay.scanARCampaign(opt);
