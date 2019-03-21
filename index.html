@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -55,42 +55,5 @@
    <button onclick="share()">Share</button>
    <button onclick="scanar()">ScanAR 03</button>
   </body>
-</html> -->
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-<!-- https://branchbarebones.app.link/lw0J09wiCU -->
-<!-- https://branchster.app.link/8zDVl4ROvU -->
-<script>
-  function onClick(params) {
-    window.location.href = 'https://branchbarebones.app.link/D9CJI57sCU';
-  }
-
-  function closePopup() {
-    ZaloPay.closeWindow();
-  }
-
-  function scan() {
-      var opt =       {
-        desc: 'scanQRCode desc',
-        needResult: 1, // 0 by default, with the scanning result processed by ZaloPay. The scanning result is directly returned if it is 1.
-        scanType: ["qrCode","barCode"], // Scanning type, including QR code or bar code. Both by default.
-        success: function(res) {
-          alert("scan result: " + res.scan_result);
-        }
-      };
-	  	ZaloPay.scanQRCode(opt);
-    }
-    
-</script>
-</head>
-<body>
-
-<a href="https://testbed-swift.app.link/1av1oy9PvU">Google</a>
-<button onclick="onClick()"> ZaloPay</button>
-<button onclick="closePopup()">Close Test</button>
-<button onclick="scan()">ScanQR</button>
-</body>
 </html>
+
