@@ -5,6 +5,14 @@
     {
       "appID": "NA49TH345U.vn.com.vng.zalopay.stg3",
       "paths": ["*"]
+    },
+    {
+      "appID": "NA49TH345U.vn.com.vng.zalopay",
+      "paths": ["*"]
+    },
+    {
+      "appID": "NA49TH345U.vn.com.vng.zalopay.sb3",
+      "paths": ["*"]
     }
     ]
   }
