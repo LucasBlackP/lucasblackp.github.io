@@ -26,8 +26,9 @@
     </style>
     <script>
         function showDialog() {
-            alert('call show dialog')
-            ZaloPay.showLoading();
+            // alert('call show dialog')
+            // ZaloPay.showLoading();
+            webkit.messageHandlers.GetUrlAtDocumentEnd.postMessage(document.URL)
         }
     </script>
   </head>
