@@ -1,53 +1,32 @@
 <!DOCTYPE html>
-<!-- saved from url=(0033)https://nghianguyen979.github.io/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="theme-color" content="#000000">
-    <title>Web app testing </title>
-    <script src="./lucasblackp.io_files/zpdk.js"></script>
-    <script src="./lucasblackp.io_files/ios_jsbridge.js"></script>
-    <!-- <script src="./lucasblackp.io_files/testingComponent.js"></script> -->
-    
-    <style>
-        table, th, td {
-          border: 0.5px solid black;
-          border-collapse: collapse;
-        }
-        th, td {
-          padding: 5px;
-          text-align: left;   
-        }
-        button {
-          display: inline-block;   /* this shouldn't be needed on a button though */
-          width: 100%;
-          height: 100%;
-        }
-    </style>
-    <script>
-        function showDialog() {
-            // alert('call show dialog')
-            // ZaloPay.showLoading();
-            window.webkit.messageHandlers.getUrlAtDocumentEndScript.postMessage("Hello, world!");
-        }
-    </script>
-  </head>
-  
-  <body>
-    <h2>Demo webapp for testing</h2>
-    <p>Choose at least one funtion to test!</p>
-    <table style="width:100%">
-        <tbody><tr>
-          <td> <button onclick="closeWindow()">Close WebView</button></td>
-          <td> <button onclick="showLoading()">Show Loading</button></td>
-          <td> <button onclick="hideLoading()">Hide Loading</button></td>
-        </tr>
-      
-        <tr>
-          <td colspan="1"> <button onclick="showDialog()">Show Dialog</button></td>
-           <td colspan="1"> <button onclick="payOrder()">Pay(App To App)</button></td>
-        </tr>
-      </tbody></table>
-  
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                padding-top: 40px; 
+            }
+        </style>
+        <title>WKWebView Demo</title>
+        <meta charset="UTF-8">
+    </head>
+    <body style="background-color: yellow;">
+        <h1>WKWebView Test</h1>
 
-</body></html>
+        <form class="form-signin" role="form">
+                <div class="form-content">
+
+                    <label for="email" class="form-email">Already an account?</label>
+                    <br />
+                    <input type="email" id="email" class="form-control" placeholder="Email" required autofocus />
+                    <br />
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    <br />
+
+                    <button class="btn btn-lg btn-primary btn-block" type="button" onClick="sendLoginAction()">
+                        Submit
+                    </button>
+                </div>
+        </form>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
