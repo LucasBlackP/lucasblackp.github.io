@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appID": "NA49TH345U.vn.com.vng.zalopay.sb3",
+        "appIDs": [ "M2F68B5YK5.co.tamara", "M2F68B5YK5.co.tamara.staging" ],
         "paths": ["*"]
       }
     ]
