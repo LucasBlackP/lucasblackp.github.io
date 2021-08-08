@@ -4,7 +4,7 @@
     "details": [
       {
         "appIDs": [ "M2F68B5YK5.co.tamara", "M2F68B5YK5.co.tamara.staging" ],
-        "paths": ["*"]
+        "paths": ["NOT/email-verification","*"]
       }
     ]
   }
